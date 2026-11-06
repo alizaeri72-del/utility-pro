@@ -1,0 +1,11 @@
+{
+  "name": "UTILITY PRO",
+  "short_name": "UTILITY PRO",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2f6f7",
+  "theme_color": "#12384a",
+  "icons": []
+}

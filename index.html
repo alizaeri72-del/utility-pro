@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#12384a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<title>UTILITY PRO</title>
+</head>
+<body>
+<header>
+  <div class="eyebrow">REFINERY DIGITAL OPERATIONS</div>
+  <h1>UTILITY PRO</h1>
+  <p>سامانه مدیریت و آموزش تصفیه‌خانه پالایشگاه</p>
+  <span class="status">نسخه آزمایشی محلی · بدون اتصال به تجهیزات واقعی</span>
+</header>
+<nav aria-label="ناوبری اصلی">
+  <button class="active" data-view="home">داشبورد</button>
+  <button data-view="industrial">فاضلاب صنعتی</button>
+  <button data-view="sanitary">فاضلاب بهداشتی</button>
+  <button data-view="equipment">تجهیزات</button>
+  <button data-view="notes">یادداشت‌ها</button>
+</nav>
+<main>
+<section id="home" class="view active">
+  <h2>داشبورد تصفیه‌خانه</h2>
+  <div class="cards">
+    <article class="card"><small>ماژول‌های اصلی</small><strong>۲</strong><p>صنعتی و بهداشتی</p></article>
+    <article class="card"><small>وضعیت پروژه</small><strong>۱.۰</strong><p>نمونه اولیه</p></article>
+  </div>
+  <h3>انتخاب واحد</h3>
+  <div class="cards">
+    <button class="card action" data-open="industrial"><strong>♻️ فاضلاب صنعتی روغنی</strong><p>جداسازی روغن، تصفیه شیمیایی و پایش کیفیت</p></button>
+    <button class="card action" data-open="sanitary"><strong>💧 فاضلاب بهداشتی</strong><p>لجن فعال، هوادهی و کلاریفایر</p></button>
+  </div>
+  <p class="notice">تمام داده‌ها در این نسخه نمایشی هستند. پیش از استفاده عملیاتی، اطلاعات باید با مدارک مصوب پالایشگاه تطبیق داده شوند.</p>
+</section>
+<section id="industrial" class="view">
+  <h2>فاضلاب صنعتی روغنی</h2>
+  <p>هدف: جداسازی روغن آزاد و جامدات، تصفیه شیمیایی و رساندن پساب به کیفیت موردنیاز.</p>
+  <h3>اطلاعات شناخته‌شده پروژه</h3>
+  <ul>
+    <li>مواد مطرح‌شده: کاستیک، پراکسید هیدروژن، آلوم و DOPE.</li>
+    <li>محل تزریق آلوم و DOPE: سامپ اکسیداسیون.</li>
+    <li>pH هدف اعلام‌شده سامپ: حدود ۱۰.</li>
+  </ul>
+  <p class="notice">محل و دوز دقیق تزریق، ترتیب مواد، زمان تماس و حدود عملیاتی باید از PFD، P&amp;ID، دستورالعمل و مدارک ایمنی تأیید شوند؛ این برنامه آن‌ها را حدس نمی‌زند.</p>
+  <h3>پارامترهای پایش</h3>
+  <div class="tags"><span>pH</span><span>COD</span><span>TSS</span><span>Oil &amp; Grease</span><span>دبی</span></div>
+</section>
+<section id="sanitary" class="view">
+  <h2>فاضلاب بهداشتی</h2>
+  <p>فرآیند شناخته‌شده: لجن فعال با هوادهی و کلاریفایر.</p>
+  <h3>اجزای کلیدی</h3>
+  <ul><li>حوض هوادهی و دیفیوزرها</li><li>بلوئر تأمین هوا</li><li>کلاریفایر ثانویه</li><li>خط برگشت لجن (RAS) و دفع لجن مازاد (WAS)، در صورت وجود در طراحی</li></ul>
+  <h3>شاخص‌های پایش</h3>
+  <div class="tags"><span>DO</span><span>MLSS</span><span>SVI</span><span>F/M</span><span>BOD</span><span>COD</span></div>
+  <p class="notice">دبی طراحی، حدود کنترل و تنظیمات بهره‌برداری هنوز نیازمند تأیید از مدارک واقعی هستند.</p>
+</section>
+<section id="equipment" class="view">
+  <h2>بانک تجهیزات نمونه</h2>
+  <input id="search" placeholder="جست‌وجوی Tag یا نام تجهیز">
+  <div id="equipment-list"></div>
+  <p class="notice">Tagهای زیر نمونه آموزشی هستند و Tag واقعی پالایشگاه محسوب نمی‌شوند.</p>
+</section>
+<section id="notes" class="view">
+  <h2>یادداشت‌های پروژه</h2>
+  <label for="note">یادداشت یا اطلاعاتی که بعداً بررسی می‌کنیم</label>
+  <textarea id="note" rows="5" placeholder="مثلاً دبی طراحی یا شماره نقشه..."></textarea>
+  <button id="save-note">ذخیره روی همین دستگاه</button>
+  <p id="saved" role="status"></p>
+  <p class="notice">یادداشت‌ها در حافظه همین مرورگر ذخیره می‌شوند؛ هنوز همگام‌سازی ابری یا حساب کاربری وجود ندارد.</p>
+</section>
+</main>
+<footer>UTILITY PRO · نسخه شروع پروژه</footer>
+<script src="app.js"></script>
+</body></html>
